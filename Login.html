@@ -3,11 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    <title>login Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,20…1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+
+body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: lightgray;
+      }
+      form {
+        border: 1px solid lightgray;
+        max-width: 450px;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: "Poppins", sans-serif;
+        box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.3);
+        background-color: white;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      h1 {
+        font-size: 30px;
+        font-weight: 600;
+      }
+      .form-group {
+        display: flex;
+        justify-content: center;
+      }
+      .login-signup {
+        flex: 1;
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.2s ease-in-out;
+        background-color: lightgray;
+        color: black;
+        display: inline-block;
+        width: 50%;
+        border: none;
+      }
+      #login-tab:checked + label {
+        background: linear-gradient(45deg, #d136cd, #ee4e63);
+        color: white;
+      }
+      #signup-tab:checked + label {
+        background: linear-gradient(45deg, #d136cd, #ee4e63);
+        color: white;
+      }
+      #login-tab:not(:checked) + label,
+      #signup-tab:not(:checked) + label {
+        background-color: lightgray;
+        color: black;
+      }
+      .background {
+        color: white;
+      }
+      .background:hover {
+        background: linear-gradient(45deg, #ee4e63, #d136cd);
+        border-radius: 0;
+        transition: 0.2s;
+      }
+      .color {
+        background-color: lightgray;
+        color: black;
+      }
+      .color:hover {
+        background: linear-gradient(45deg, #ee4e63, #d136cd);
+        border-radius: 0;
+        transition: 0.2s;
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .email-password {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 10px 0px;
+        width: 375px;
+        outline: none;
+        border: none;
+        border: 2px solid lightgray;
+        background-color: lightgray;
+        transition: 0.2s ease-in-out;
+      }
+      .email-password:focus {
+        border: 2px solid #d136cd;
+        background-color: white;
+        outline: none;
+      }
+      .forgot-password {
+        text-decoration: none;
+        color: #d136cd;
+        font-size: 14px;
+        font-weight: 400;
+        align-self: flex-start;
+        margin-left: 2%;
+      }
+      .button-login {
+        width: 395px;
+        font-size: 16px;
+        background: linear-gradient(45deg, #d136cd, #ee4e63);
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 5px;
+        font-weight: 600;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+      .button-login:hover {
+        background: linear-gradient(45deg, #ee4e63, #d136cd);
+        border-radius: 0;
+        transition: 0.5s;
+      }
+      .signup-now {
+        text-align: center;
+        margin: 30px;
+        margin-top: 40px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .signup-now a {
+        text-decoration: none;
+        color: #d136cd;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    
+</style>
 </head>
 <body>
-    <main>
-        <h1>Login</h1>
-    </main>
+    <form action="#">
+    <div>
+        <h1>Login Form</h1>
+    </div>
+   <div class="form-group">
+    <input type="radio" id="login-tab" name="tab" checked hidden>
+    <label for="login-tab" class="login-signup background" style="width: 260px;">Login</label>
+    <input type="radio" id="signup-tab" name="tab" hidden>
+    <label for="signup-tab" class="login-signup color">Signup</label>
+    </div>
+    <div>
+        <div type="input-group">
+        <input class="email-password" type="email" placeholder="Email address">
+        <input class="email-password" type="text" placeholder="Password">
+        <a href="#" class="forgot-password">Forgot password?</a>
+    </div>
+    <div class="login">
+        <button class="button-login">Login</button>
+    </div>
+    <div class="signup-now">
+        <p>
+            Not a member?
+            <a href="#">Signup now</a>
+        </p>
+    </div>
+</form>
 </body>
 </html>
